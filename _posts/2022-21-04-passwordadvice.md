@@ -5,7 +5,7 @@ categories: [advice, password]
 tags: [password, advice]     # TAG names should always be lowercase
 ---
 
-![DALL·E 2022-12-04 16 52 23](https://user-images.githubusercontent.com/5285547/205504264-ac30cd61-57a2-4275-8237-d71b9e08002b.png){: width="200" height="200" }
+![DALL·E 2022-12-04 16 52 23](https://user-images.githubusercontent.com/5285547/205504491-c22bc2d0-184e-4913-bd7e-2e4cc23f204d.png){.center}
 
 Are you tired of using the same weak and easily hackable password for all of your online accounts? It's time to step up your game and create strong and unique passwords that will keep your personal information safe. Here are some tips to help you do just that:
 

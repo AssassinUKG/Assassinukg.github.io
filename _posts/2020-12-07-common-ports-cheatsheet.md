@@ -1,8 +1,8 @@
 ---
 title: Ports 
 date: 2022-12-04 16:35:00 +00:00
-categories: [welcome]
-tags: [welcome]     # TAG names should always be lowercase
+categories: [ports]
+tags: [ports]     # TAG names should always be lowercase
 ---
 
 # Common Ports And Usage

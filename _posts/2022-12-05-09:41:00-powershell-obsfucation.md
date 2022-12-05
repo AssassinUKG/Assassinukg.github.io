@@ -5,6 +5,7 @@ categories: [tips, tricks]
 tags: [tips]     # TAG names should always be lowercase
 ---
 
+All below functions were generated with the OpenAI Chat app: https://chat.openai.com/chat
 
 ## Strings
 

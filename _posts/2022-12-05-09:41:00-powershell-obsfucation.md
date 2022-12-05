@@ -91,6 +91,22 @@ Write-Output $obfuscatedClassName
 
 ```
 
+## Numbers
+
+```powershell
+function Obfuscate-Number([int]$number) {
+  $random = New-Object System.Random
+  $obfuscated = ""
+  $number = $number.ToString()
+  
+  for ($i = 0; $i -lt $number.Length; $i++) {
+    $obfuscated += $random.Next(0,9)
+  }
+
+  return $obfuscated
+}
+```
+
 ## Payloads
 
 ```powershell

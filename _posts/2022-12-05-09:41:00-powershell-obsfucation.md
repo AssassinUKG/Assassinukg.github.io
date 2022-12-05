@@ -24,7 +24,7 @@ function Obfuscate-String {
 }
 ```
 
-```
+```powershell
 function Obfuscate-Name
 {
     [CmdletBinding()]

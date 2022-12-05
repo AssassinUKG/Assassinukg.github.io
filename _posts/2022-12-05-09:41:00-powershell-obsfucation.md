@@ -6,8 +6,6 @@ tags: [tips]     # TAG names should always be lowercase
 ---
 
 
-# Powershell obfsucation
-
 ## Strings
 
 ```powershell

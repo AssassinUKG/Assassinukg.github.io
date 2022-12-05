@@ -5,7 +5,18 @@ categories: [tips, tricks]
 tags: [tips]     # TAG names should always be lowercase
 ---
 
-All below functions were generated with the OpenAI Chat app: https://chat.openai.com/chat
+PowerShell obfuscation is the practice of making it difficult to understand or reverse engineer PowerShell code. This can be useful for a variety of reasons, such as to protect intellectual property, to prevent unauthorized access to sensitive information, or to make it more difficult for attackers to exploit vulnerabilities in the code.
+
+There are many different techniques that can be used to obfuscate PowerShell code, and the specific method that is most effective will depend on the situation and the goals of the obfuscation. Some common techniques for obfuscating PowerShell code include:
+
+- String concatenation: This technique involves splitting strings into multiple pieces and concatenating them at runtime, which can make it difficult to read or understand the code.
+- Character replacement: This technique involves replacing characters in the code with other characters or symbols, which can make it difficult to read or understand the code.
+- Code encryption: This technique involves encrypting the code, which can make it difficult to access or reverse engineer the code without the appropriate decryption key.
+- Control flow obfuscation: This technique involves using complex control flow structures, such as nested loops or conditional statements, to make it difficult to understand the logical flow of the code.
+
+It's important to note that while obfuscation techniques can make it more difficult to understand or reverse engineer PowerShell code, they are not foolproof and can be defeated by skilled attackers. In addition, using obfuscation techniques can make the code more difficult to maintain or debug, and it can introduce additional complexity and overhead to the code. As such, it's important to carefully consider the potential benefits and drawbacks of obfuscation before using it in your PowerShell code.
+
+> **_NOTE_:** All below functions were generated with the OpenAI Chat app: https://chat.openai.com/chat
 
 ## Strings
 

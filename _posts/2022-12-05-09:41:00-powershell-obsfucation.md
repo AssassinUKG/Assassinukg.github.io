@@ -25,6 +25,8 @@ function Obfuscate-String {
 }
 ```
 
+## Name
+
 ```powershell
 function Obfuscate-Name
 {
@@ -46,6 +48,24 @@ and then adding the middle part of the name in between.
 For example, if the original name is "John", the obfuscated name would be "J5hno".  
 This is just one example of a name obfuscator using concatenation, and there are many other ways to implement this type of script.  
 
+```powershell
+function Obfuscate-Name {
+    param (
+        [parameter(Mandatory=$true)]
+        [string]$Name
+    )
+    # Replace vowels with numbers
+    $Name = $Name -replace "[aeiou]", "1"
+    # Reverse the string
+    $Name = $Name | ForEach-Object { [char[]]$_ } | 
+        ForEach-Object { $_[($_.Count - 1)..0] } |
+        ForEach-Object { [string]$_ }
+    # Concatenate the name with a random string
+    $RandomString = [System.IO.Path]::GetRandomFileName()
+    $ObfuscatedName = "$Name$RandomString"
+    return $ObfuscatedName
+}
+```
 
 ## Variables
 

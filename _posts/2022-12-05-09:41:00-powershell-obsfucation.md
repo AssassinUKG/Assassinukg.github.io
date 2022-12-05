@@ -155,3 +155,45 @@ function Obfuscate-Payload {
     }
 }
 ```
+
+AES Encrypt and Decrypt
+
+```powershell
+# Define a function for encrypting data using AES
+function Encrypt-AES {
+    param (
+        [parameter(Mandatory=$true)]
+        [byte[]]$Data,
+        [parameter(Mandatory=$true)]
+        [byte[]]$Key,
+        [parameter(Mandatory=$true)]
+        [byte[]]$IV
+    )
+    $AES = New-Object System.Security.Cryptography.AesCryptoServiceProvider
+    $AES.Key = $Key
+    $AES.IV = $IV
+    $Encryptor = $AES.CreateEncryptor()
+    $EncryptedData = $Encryptor.TransformFinalBlock($Data, 0, $Data.Length)
+    $AES.Clear()
+    return $EncryptedData
+}
+
+# Define a function for decrypting data using AES
+function Decrypt-AES {
+    param (
+        [parameter(Mandatory=$true)]
+        [byte[]]$Data,
+        [parameter(Mandatory=$true)]
+        [byte[]]$Key,
+        [parameter(Mandatory=$true)]
+        [byte[]]$IV
+    )
+    $AES = New-Object System.Security.Cryptography.AesCryptoServiceProvider
+    $AES.Key = $Key
+    $AES.IV = $IV
+    $Decryptor = $AES.CreateDecryptor()
+    $DecryptedData = $Decryptor.TransformFinalBlock($Data, 0, $Data.Length)
+    $AES.Clear()
+    return $DecryptedData
+}
+```

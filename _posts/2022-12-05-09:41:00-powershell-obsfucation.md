@@ -67,6 +67,25 @@ function Obfuscate-Name {
 }
 ```
 
+```powershell
+function Deobfuscate-Name {
+    param (
+        [parameter(Mandatory=$true)]
+        [string]$Name
+    )
+    # Remove the random string from the end of the name
+    $RandomStringLength = [System.IO.Path]::GetRandomFileName().Length
+    $Name = $Name.Substring(0, $Name.Length - $RandomStringLength)
+    # Reverse the string
+    $Name = $Name | ForEach-Object { [char[]]$_ } | 
+        ForEach-Object { $_[($_.Count - 1)..0] } |
+        ForEach-Object { [string]$_ }
+    # Replace numbers with vowels
+    $Name = $Name -replace "1", "a"
+    return $Name
+}
+```
+
 ## Variables
 
 ```powershell

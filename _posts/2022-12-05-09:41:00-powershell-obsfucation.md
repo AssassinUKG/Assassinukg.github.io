@@ -39,7 +39,7 @@ function Obfuscate-Name
     return $ObfuscatedName
 }
 ```
-his script takes a string representing a name as input and returns an obfuscated version of the name.   
+This script takes a string representing a name as input and returns an obfuscated version of the name.   
 The obfuscated name is created by concatenating the first and last letters of the original name with the length of the name,  
 and then adding the middle part of the name in between.   
 For example, if the original name is "John", the obfuscated name would be "J5hno".  

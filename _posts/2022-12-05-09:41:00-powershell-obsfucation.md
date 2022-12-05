@@ -1,6 +1,6 @@
 ---
 title: Powershell Obsfucation tricks 
-date: 2022-12-04 16:35:00 +00:00
+date: 2022-12-05 09:49:00 +00:00
 categories: [tips, tricks]
 tags: [tips]     # TAG names should always be lowercase
 ---

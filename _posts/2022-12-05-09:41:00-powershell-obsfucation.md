@@ -24,6 +24,28 @@ function Obfuscate-String {
 }
 ```
 
+```
+function Obfuscate-Name
+{
+    [CmdletBinding()]
+    param
+    (
+        [Parameter(Mandatory=$true)]
+        [string]$Name
+    )
+
+    $ObfuscatedName = ($Name[0] + $Name.Length) + $Name.Substring(1, $Name.Length-2) + ($Name[$Name.Length-1] + $Name.Length)
+
+    return $ObfuscatedName
+}
+```
+his script takes a string representing a name as input and returns an obfuscated version of the name.   
+The obfuscated name is created by concatenating the first and last letters of the original name with the length of the name,  
+and then adding the middle part of the name in between.   
+For example, if the original name is "John", the obfuscated name would be "J5hno".  
+This is just one example of a name obfuscator using concatenation, and there are many other ways to implement this type of script.  
+
+
 ## Variables
 
 ```powershell
@@ -55,6 +77,7 @@ function Obfuscate-ClassName {
   return $obfuscatedClassName
 }
 ```
+
 
 ```powershell
 function Obfuscate-ClassName

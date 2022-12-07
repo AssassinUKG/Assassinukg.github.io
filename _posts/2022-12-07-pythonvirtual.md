@@ -1,6 +1,6 @@
 ---
 title: Python Virtual Enviroment (with specific python version) 
-date: 2022-12-07 18:35:00 +00:00
+date: 2022-12-07 18:25:00 +00:00
 categories: [tutorial, code, python]
 tags: [tutorial, code, python]     # TAG names should always be lowercase
 ---

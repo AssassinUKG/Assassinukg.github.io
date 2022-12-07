@@ -1,6 +1,6 @@
 ---
 title: Python Virtual Enviroment (with specific python version) 
-date: 2022-12-04 16:35:00 +00:00
+date: 2022-12-07 18:35:00 +00:00
 categories: [tutorial, code, python]
 tags: [tutorial, code, python]     # TAG names should always be lowercase
 ---
@@ -16,4 +16,4 @@ To create a Python 3 virtual environment with a specific version of Python, foll
 
 Once your virtual environment is activated, you can begin installing packages and using Python with the specific version you selected.   
 
-When you are finished working in the virtual environment, you can deactivate it by running the deactivate command.
+When you are finished working in the virtual environment, you can deactivate it by running the `deactivate` command.

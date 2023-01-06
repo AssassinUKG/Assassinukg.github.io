@@ -101,11 +101,6 @@ $charSub = $string.Replace("1", "l").Replace("0", "o")
 # Output: "Hello World"
 ```
 
-9. Integer substitution
-
-```powershell
-
-```
 
 ## String encoding expanded
 

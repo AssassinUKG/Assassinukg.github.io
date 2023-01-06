@@ -111,6 +111,8 @@ $charSub = $string.Replace("1", "l").Replace("0", "o")
 
 Here is an example of encoding and decoding using base64, base32, base16 (hexadecimal), base8 (octal), and base2 (binary):
 
+All the base's
+
 ```powershell
 # Encode
 $string = "Hello World"
@@ -133,3 +135,4 @@ $decodedString = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBa
 ```
 
 >Note that the FromBase64String and GetBytes methods of the System.Convert and System.Text.Encoding classes, respectively, can be used to decode the encoded strings. You can also use the ToBase64String, ToBase32String, and ToString methods to encode strings in these different bases.
+

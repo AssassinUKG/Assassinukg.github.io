@@ -6,7 +6,7 @@ tags: [ports]     # TAG names should always be lowercase
 ---
 
 
-# Powershell Obsfucation tricks
+# Powershell Obsfucation tricks with examples
 
 Here is a list of obsfucation techniques. 
 
@@ -21,5 +21,71 @@ Here is a list of obsfucation techniques.
 Remember that while obfuscation can make it harder for someone to understand your code, it is not a foolproof method for hiding it. It is always possible for someone with enough knowledge and resources to reverse-engineer obfuscated code.
 
 
+1. String encoding:
 
+```powershell
+$string = "Hello World"
+$encodedString = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($string))
+# Output: "SGVsbG8gV29ybGQ="
+```
 
+1. Command substitution:
+
+```
+$output = dir | Out-String
+$command = "Get-ChildItem"
+Invoke-Expression $command
+# Output: The contents of the current directory
+```
+
+2. Variable renaming:
+
+```
+$a = 1
+$b = 2
+$c = 3
+$xyz = $a + $b + $c
+# Output: 6
+```
+
+3. Function renaming:
+
+```
+function abc {
+    "Hello World"
+}
+
+abc
+# Output: "Hello World"
+```
+
+4. Comment removal:
+
+```
+# This is a comment
+Write-Output "Hello World"
+
+# Output: "Hello World"
+Code concatenation:
+Copy code
+$code = "Write-Output `"H`" + `"ello`""
+$code += " `"W`" + `"orld`""
+Invoke-Expression $code
+# Output: "Hello World"
+```
+
+5. Control flow obfuscation:
+
+```
+$i = 0
+$output = ""
+
+while ($i -lt 5) {
+    $output += "Hello "
+    $i++
+}
+
+$output += "World"
+Write-Output $output
+# Output: "Hello Hello Hello Hello Hello World"
+```

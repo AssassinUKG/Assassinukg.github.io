@@ -29,18 +29,18 @@ $encodedString = [System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.G
 # Output: "SGVsbG8gV29ybGQ="
 ```
 
-1. Command substitution:
+2. Command substitution:
 
-```
+```powershell
 $output = dir | Out-String
 $command = "Get-ChildItem"
 Invoke-Expression $command
 # Output: The contents of the current directory
 ```
 
-2. Variable renaming:
+3. Variable renaming:
 
-```
+```powershell
 $a = 1
 $b = 2
 $c = 3
@@ -48,9 +48,9 @@ $xyz = $a + $b + $c
 # Output: 6
 ```
 
-3. Function renaming:
+4. Function renaming:
 
-```
+```powershell
 function abc {
     "Hello World"
 }
@@ -59,24 +59,27 @@ abc
 # Output: "Hello World"
 ```
 
-4. Comment removal:
+5. Comment removal:
 
-```
+```powershell
 # This is a comment
 Write-Output "Hello World"
 
 # Output: "Hello World"
-Code concatenation:
-Copy code
+```
+
+6. Code concatenation:
+
+```
 $code = "Write-Output `"H`" + `"ello`""
 $code += " `"W`" + `"orld`""
 Invoke-Expression $code
 # Output: "Hello World"
 ```
 
-5. Control flow obfuscation:
+7. Control flow obfuscation:
 
-```
+```powershell
 $i = 0
 $output = ""
 

@@ -2,7 +2,7 @@
 title: Ports 
 date: 2023-01-06 16:35:00 +00:00
 categories: [powershell, cheatsheet]
-tags: [powershell, cheatsheet]     # TAG names should always be lowercase
+tags: [powershell, cheatsheet]    
 ---
 
 

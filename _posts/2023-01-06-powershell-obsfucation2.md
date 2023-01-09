@@ -1,5 +1,5 @@
 ---
-title: Ports 
+title: Powershell Obsfucation tricks with examples 
 date: 2023-01-06 16:35:00 +00:00
 categories: [powershell, cheatsheet]
 tags: [powershell, cheatsheet]    

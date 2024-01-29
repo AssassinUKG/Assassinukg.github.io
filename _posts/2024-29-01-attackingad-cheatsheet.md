@@ -1,6 +1,6 @@
 ---
 title: Attacking AD 
-date: 2024-01-29 16:35:00 +00:00
+date: 2024-21-01 16:35:00 +00:00
 categories: [activeDirectory, cheatsheet]
 tags: [activeDirectory, cheatsheet]    
 ---

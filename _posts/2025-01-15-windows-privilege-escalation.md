@@ -3,9 +3,6 @@ title: Windows Privilege Escalation Techniques
 date: 2025-01-15 10:00:00 +00:00
 categories: [windows, privilege-escalation]
 tags: [windows, privilege-escalation, pentesting, security]
-image:
-  path: /assets/img/posts/windows-privesc.png
-  alt: Windows Privilege Escalation Techniques
 ---
 
 # Windows Privilege Escalation Techniques
